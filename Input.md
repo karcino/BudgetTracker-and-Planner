@@ -1,4 +1,22 @@
 # OCR_recipe_as_Input
+## Overview 
+
+basic Idea: `
+  if(spending money) {
+    if (have recipe) { recipe.scan().ocr().createTable().insertIntoDB } 
+    else {enterManually()}
+
+```mermaid
+  flowchart TD
+    A(Spending Money) -->|Have Receipt| B(Scan Receipt)
+    B --> C(Perform OCR)
+    C --> D(Create Table from OCR Data)
+    D --> E(Insert Data into Database)
+    A -->|No Receipt| F(Enter Data Manually)
+    E --> G{Process Complete}
+    F --> G  
+```
+
 ## OCR
 I took a photo of my recipe and ran OCR with [https://www.ocrwebservice.com/](https://www.ocrwebservice.com/) selecting output format .XLS. Here is the Output: 
 
@@ -43,7 +61,7 @@ And a Summary of the Recipe Data:
 > **Trace Number:** 992027  
 > **Debit Card Ending:** 5860  
 
+Possible alternatives: 
+  - 2. XLS (Yet to try)
 
-
-
-### 2. XLS (Yet to try)
+# Manual Input
